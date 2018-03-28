@@ -1,7 +1,12 @@
 import React from 'react'
-
-export default class App extends React.Component {
+import { Route, Switch, withRouter } from 'react-router-dom'
+class App extends React.Component {
     render() {
-        return <div>app</div>
+        const { history, location, match } = this.props;
+        return <Switch key={location.pathname} location={location}>
+            <Route exact path="/" component={require('./index.jsx').default} />
+        </Switch>
     }
 }
+
+export default withRouter(App)
