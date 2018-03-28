@@ -1,0 +1,37 @@
+{
+  "name": "tai-react-ui",
+  "version": "1.0.0",
+  "description": "\"# tai-react-ui\" \r \"# tai-react-ui\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "rollup -c ./build/rollup.config.dev.js -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lazyTai/tai-react-ui.git"
+  },
+  "author": "lazyTai",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lazyTai/tai-react-ui/issues"
+  },
+  "homepage": "https://github.com/lazyTai/tai-react-ui#readme",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "postcss-modules": "^1.1.0",
+    "postcss-utils": "^1.0.2",
+    "precss": "^3.1.2",
+    "rollup-plugin-babel": "^3.0.3",
+    "rollup-plugin-commonjs": "^9.1.0",
+    "rollup-plugin-json": "^2.3.0",
+    "rollup-plugin-node-resolve": "^3.3.0",
+    "rollup-plugin-postcss": "^1.4.0",
+    "rollup-plugin-replace": "^2.0.0",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
