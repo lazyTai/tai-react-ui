@@ -16,10 +16,10 @@ var browsers = [
     'and_uc 9.9',
 ];
 module.exports = {
-    devtool: 'source-map',
+    devtool: "source-map",
     externals: {
-        "react": 'React',
-        "react-dom": 'ReactDOM',
+        // "react": 'React',
+        // "react-dom": 'ReactDOM',
         // "react-router": 'ReactRouter'
     },
     entry: baseConfig.entry,

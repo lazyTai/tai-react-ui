@@ -1,14 +1,17 @@
-.t-button{
+.dy-button{
     color: #fff;
     border: none;
     height: 30px;
     line-height: 30px;
+    margin-left: 10px; 
+    box-sizing: border-box;
     outline:none;
+    border-radius: 3px;
     &:active {
         outline:none;
         opacity: 0.5;
       }
 }
-.t-button.primary{
+.dy-button.primary{
     color: #fff;
 }
