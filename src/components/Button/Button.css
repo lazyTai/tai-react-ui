@@ -1,3 +1,14 @@
 .t-button{
     color: #fff;
+    border: none;
+    height: 30px;
+    line-height: 30px;
+    outline:none;
+    &:active {
+        outline:none;
+        opacity: 0.5;
+      }
+}
+.t-button.primary{
+    color: #fff;
 }

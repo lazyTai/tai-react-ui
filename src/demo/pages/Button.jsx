@@ -5,7 +5,11 @@ class Button1 extends React.Component {
     render() {
         return (
             <div>
-                <Button>primary</Button>
+                <Button type="primary">primary</Button>
+                <Button type="danger">danger</Button>
+                <Button type="infor">infor</Button>
+                <Button type="disabled">disabled</Button>
+                <Button type="hollow">hollow</Button>
             </div>
         )
     }

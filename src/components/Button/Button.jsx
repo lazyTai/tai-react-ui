@@ -1,20 +1,40 @@
 import React, { Component } from 'react';
 
 import Styles from './Button.css'
+import PropTypes from 'prop-types';
 
-export default class Button extends Component {
+
+class Button extends Component {
     static defaultProps = {
-        name: 'Runoob'
+        type: 'default'
     };
+    state = {
+    };
+    setStyle() {
+        var { children, type } = this.props;
+        var style = {
+            background: '#fff',
+            color: '#fff'
+        }
+        if (type == 'primary') {
+            style.background = "#12c287";
+            style.color = "#fff"
+        }
+        return style
+    }
     render() {
-        var { children } = this.props;
+        var { children, type } = this.props;
+        // console.log(type)
+        var style = this.setStyle();
         return (
-            <div className={Styles['t-button']}>
-                <button>
-                    {this.props.name}
-                    {children}
-                </button>
-            </div>
+            <button className={Styles['t-button']} style={style}>
+                {children}
+            </button>
         )
     }
 }
+
+Button.propTypes = {
+    type: PropTypes.string.isRequired
+};
+export default Button

@@ -2,6 +2,19 @@ var baseConfig = require('./webpack.base.js')
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack')
 var path = require('path')
+var browsers = [
+    'last 3 versions',
+    'ie >= 10',
+    'ie_mob >= 10',
+    'ff >= 30',
+    'chrome >= 34',
+    'safari >= 6',
+    'opera >= 12.1',
+    'ios >= 6',
+    'android >= 4.4',
+    'bb >= 10',
+    'and_uc 9.9',
+];
 module.exports = {
     devtool: 'source-map',
     externals: {
@@ -12,7 +25,7 @@ module.exports = {
     entry: baseConfig.entry,
     output: baseConfig.output,
     resolve: {
-        extensions: ['.js','.jsx', '.json', '.css'],
+        extensions: ['.js', '.jsx', '.json', '.css'],
         alias: {
             // 'vue$': 'vue/dist/vue.esm.js',
         }
@@ -26,15 +39,20 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: [
-                    { loader: 'style-loader'  },
-                    { loader: 'css-loader',
-                    query:{
-                        modules:true,
-                        localIdentName:"[name]-[local]-[hash:base64:5]"
-                    }  
-                },
-                ],
+                use: ExtractTextPlugin.extract({
+                    fallback: "style-loader",
+                    use: [
+                        { loader: "css-loader", },
+                        {
+                            loader: 'postcss-loader',
+                            options: {
+                                plugins: [
+                                    require('precss')
+                                ]
+                            }
+                        }
+                    ]
+                }),
             },
 
             // {
@@ -58,9 +76,9 @@ module.exports = {
     plugins: [
         new webpack.HotModuleReplacementPlugin(),
         new ExtractTextPlugin({
-            filename: 'stylesheet/[name].css',
+            filename: 'demo/css/[name].css',
             allChunks: true,
-          })
+        })
     ],
     devServer: {
         publicPath: baseConfig.output.publicPath,
