@@ -7,7 +7,7 @@ module.exports = {
     externals: {
         "react": 'React',
         "react-dom": 'ReactDOM',
-        "react-router": 'ReactRouter'
+        // "react-router": 'ReactRouter'
     },
     entry: baseConfig.entry,
     output: baseConfig.output,

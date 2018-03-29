@@ -20,7 +20,7 @@ gulp.task("gulp-dev-js", function (callback) {
 
 
 gulp.task('watch', function (done) {
-    gulp.watch('src/**/*', ['gulp-dev-js'])
+    gulp.watch('./src/**/*', ['gulp-dev-js'])
         .on('end', done);
 });
 
