@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './headerBack.css'
 import { Icon } from '../Icon/index'
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 class HeaderBack extends Component {
     render() {
         return <div className="dy-header-back">
