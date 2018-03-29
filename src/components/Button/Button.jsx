@@ -1,15 +1,18 @@
 import React, { Component } from 'react';
 
-import  css from './Button.css'
+import Styles from './Button.css'
 
-console.log(css)
 export default class Button extends Component {
+    static defaultProps = {
+        name: 'Runoob'
+    };
     render() {
         var { children } = this.props;
         return (
-            <div className={css['t-button']}>
+            <div className={Styles['t-button']}>
                 <button>
-                    {children} 
+                    {this.props.name}
+                    {children}
                 </button>
             </div>
         )
