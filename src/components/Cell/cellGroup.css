@@ -1,0 +1,10 @@
+.dy-cellgroup{
+    margin:30px 0; 
+    width: 100%;
+    .title{
+        font-size: 14px;
+        text-indent: 18px;
+        color:#ccc;
+        margin-bottom: 5px;
+    }
+}

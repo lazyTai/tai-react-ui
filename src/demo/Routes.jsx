@@ -9,11 +9,11 @@ class Routes extends Component {
         const { history, location, match } = this.props;
         const currentKey = location.pathname.split('/')[1] || '/';
         // console.log("currentKey", currentKey)
-        return <div>
+        return <Switch>
             <Route exact path="/" component={Index} />
             <Route path="/index1" component={Index} />
             <Route path="/button" component={Button} />
-        </div>
+        </Switch>
 
         /* <TransitionGroup>
             <CSSTransition

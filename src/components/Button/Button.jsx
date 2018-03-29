@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import './Button.css'
 import PropTypes from 'prop-types';
-
+import ButtonGroup from './ButtonGroup'
 
 class Button extends Component {
     static defaultProps = {
@@ -36,12 +36,12 @@ class Button extends Component {
             case "hollow":
                 style.background = "#fff";
                 style.color = "black";
-                style.border = "1px solid ";
+                style.border = "1px solid #eee";
                 break;
             default:
                 style.background = "#fff";
                 style.color = "black";
-                style.border = "1px solid ";
+                style.border = "1px solid #eee";
                 break;
 
         }
@@ -64,4 +64,6 @@ class Button extends Component {
 Button.propTypes = {
     type: PropTypes.string.isRequired
 };
+
+Button.ButtonGroup = ButtonGroup;
 export default Button

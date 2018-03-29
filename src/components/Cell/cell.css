@@ -1,0 +1,37 @@
+.dy-cell{
+    background: #fff;
+    height: 50px;
+    line-height: 49px;
+    display: flex;
+    box-sizing: border-box;
+    align-items: center;
+    margin: 0 10px;
+    position: relative;
+    padding:0 10px;
+
+    a{
+        color:#222;
+        text-decoration: none;
+    }
+
+    .center{
+        border-bottom: 2px solid #eee;
+    }
+    .center:last-child{
+        border-bottom: none;
+    }
+
+
+    
+   
+}
+
+.dy-cell .left_icon{
+    width: 30px;
+}
+.dy-cell .right_icon{
+    width: 15px;
+}
+.dy-cell .center{
+   flex:1;
+}

@@ -1,0 +1,16 @@
+.dy-cell-block{
+    padding:10px 0;
+}
+
+.dy-cell-block .title{
+    font-size: 13px;
+    color:#ccc;
+    text-indent: 15px;
+    margin-bottom:5px; 
+}
+.dy-cell-block .center{
+    background: #fff;
+    padding: 10px 0px;   
+    border-top:1px solid #ccc; 
+    border-bottom:1px solid #ccc;  
+}
