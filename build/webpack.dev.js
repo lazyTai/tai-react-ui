@@ -1,5 +1,5 @@
 var baseConfig = require('./webpack.base.js')
-
+const ExtractTextPlugin = require('extract-text-webpack-plugin');
 var webpack = require('webpack')
 var path = require('path')
 module.exports = {
@@ -12,7 +12,7 @@ module.exports = {
     entry: baseConfig.entry,
     output: baseConfig.output,
     resolve: {
-        extensions: ['.js', '.vue', '.json', '.css'],
+        extensions: ['.js','.jsx', '.json', '.css'],
         alias: {
             // 'vue$': 'vue/dist/vue.esm.js',
         }
@@ -26,7 +26,15 @@ module.exports = {
             },
             {
                 test: /\.css$/,
-                use: "style-loader!css-loader",
+                use: [
+                    { loader: 'style-loader'  },
+                    { loader: 'css-loader',
+                    query:{
+                        modules:true,
+                        localIdentName:"[name]-[local]-[hash:base64:5]"
+                    }  
+                },
+                ],
             },
 
             // {
@@ -48,7 +56,11 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new ExtractTextPlugin({
+            filename: 'stylesheet/[name].css',
+            allChunks: true,
+          })
     ],
     devServer: {
         publicPath: baseConfig.output.publicPath,
