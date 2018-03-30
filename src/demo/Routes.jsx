@@ -4,6 +4,8 @@ import { Route, Switch, withRouter } from 'react-router-dom';
 import './pages/css/routes.css'
 import Index from './pages/Index'
 import Button from './pages/Button'
+import PageScrollView from './pages/PageScrollView'
+import PageAnimate from './pages/PageAnimate'
 class Routes extends Component {
     render() {
         const { history, location, match } = this.props;
@@ -13,6 +15,8 @@ class Routes extends Component {
             <Route exact path="/" component={Index} />
             <Route path="/index1" component={Index} />
             <Route path="/button" component={Button} />
+            <Route path="/PageScrollView" component={PageScrollView} />
+            <Route path="/PageAnimate" component={PageAnimate} />
         </Switch>
 
         /* <TransitionGroup>

@@ -6,7 +6,8 @@ import ButtonGroup from './ButtonGroup'
 
 class Button extends Component {
     static defaultProps = {
-        type: 'default'
+        type: 'default',
+        onClick: () => { }
     };
     state = {
     };
@@ -48,12 +49,13 @@ class Button extends Component {
         return style
     }
     render() {
-        var { children, type } = this.props;
+        var { children, type, onClick } = this.props;
         // console.log(type)
         var style = this.setStyle();
         return (
             <button className="dy-button" style={style}
                 disabled={type == "disabled" ? true : false}
+                onClick={onClick}
             >
                 {children}
             </button>

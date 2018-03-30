@@ -4,7 +4,10 @@ import { Layout } from './Layout/index.js'
 import { HeaderBack, Header } from './Nav/index.js'
 import { Icon } from './Icon/index'
 import { CellGroup, CellBlock } from './Cell/index'
+import { ScrollView } from './ScrollView/index'
+import { Animate } from './Animate/index'
 
+// console.log(ScrollView)
 export {
     Button,
     Layout,
@@ -12,5 +15,7 @@ export {
     Header,
     Icon,
     CellGroup,
-    CellBlock
+    CellBlock,
+    ScrollView,
+    Animate
 }
