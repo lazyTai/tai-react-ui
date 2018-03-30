@@ -6,6 +6,7 @@ import Index from './pages/Index'
 import Button from './pages/Button'
 import PageScrollView from './pages/PageScrollView'
 import PageAnimate from './pages/PageAnimate'
+import PageRedux from './pages/PageRedux'
 class Routes extends Component {
     render() {
         const { history, location, match } = this.props;
@@ -17,6 +18,7 @@ class Routes extends Component {
             <Route path="/button" component={Button} />
             <Route path="/PageScrollView" component={PageScrollView} />
             <Route path="/PageAnimate" component={PageAnimate} />
+            <Route path="/Redux1" component={PageRedux} />
         </Switch>
 
         /* <TransitionGroup>
