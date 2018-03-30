@@ -127,6 +127,13 @@ export default class Index extends React.Component {
                         动画 PageAnimate
                     </Link>
                 </CellGroup.Cell>
+                <CellGroup.Cell arrow
+                    leftIcon="camera"
+                >
+                    <Link to="/PageRedux">
+                    PageRedux
+                    </Link>
+                </CellGroup.Cell>
             </CellGroup>
 
         </Layout>

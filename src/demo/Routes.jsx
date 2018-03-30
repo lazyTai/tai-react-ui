@@ -18,7 +18,7 @@ class Routes extends Component {
             <Route path="/button" component={Button} />
             <Route path="/PageScrollView" component={PageScrollView} />
             <Route path="/PageAnimate" component={PageAnimate} />
-            <Route path="/Redux1" component={PageRedux} />
+            <Route path="/PageRedux" component={PageRedux} />
         </Switch>
 
         /* <TransitionGroup>
