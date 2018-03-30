@@ -6,15 +6,12 @@ import { Provider } from 'react-redux'
 
 /* 加入redux */
 import { createStore } from 'redux'
-import Reducers from './reducers/index'
-
+import rootReducer from './reducers/index'
 import { Router } from 'react-router'
 import createHashHistory from 'history/createHashHistory'
 const history = createHashHistory()
+const store = createStore(rootReducer)
 
-
-
-let store = createStore(Reducers)
 ReactDOM.render(
     <Provider store={store} >
         <Router history={history}>
