@@ -4,14 +4,35 @@ import { Button, Layout, HeaderBack, CellGroup, ScrollView } from '../../compone
 
 console.log(ScrollView)
 class PageScrollView extends Component {
+    constructor() {
+        super()
+        this.state = {
+            lists: 30
+        }
+        this.renderArray = this.renderArray.bind(this)
+    }
+    renderArray() {
+        var _array = [];
+        for (var i = 0; i < this.state.lists; i++) {
+            _array.push(<div key={i}>{i}</div>)
+        }
+        return _array
+    }
     render() {
         return <Layout>
             <HeaderBack>动画滚动插件</HeaderBack>
-            <ScrollView>
+            <ScrollView style={{ height: '300px', border: '1px #eee solid' }}>
                 {
-                    (x) => {
-                        return <div
-                            dangerouslySetInnerHTML={{ __html: JSON.stringify(x) }}></div>
+                    (valueFromParent) => {
+                        return <div>
+                            <pre>
+                                {JSON.stringify(valueFromParent)}
+                            </pre>
+                            {this.renderArray()}
+                            <pre>
+                                {JSON.stringify(valueFromParent)}
+                            </pre>
+                        </div>
                     }
                 }
             </ScrollView>

@@ -1,0 +1,8 @@
+.dy-scroll-view.container{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+    width: 100%;
+}
+.dy-scroll-view.container .content{
+}
