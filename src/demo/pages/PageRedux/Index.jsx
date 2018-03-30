@@ -15,7 +15,12 @@ class PageRedux extends Component {
             <CellGroup>
                 <CellGroup.Cell>
                     <Link to="/PageRedux/Redux1">
-                        Redux1
+                        Redux1 state 加减
+                    </Link>
+                </CellGroup.Cell>
+                <CellGroup.Cell>
+                    <Link to="/PageRedux/Redux2">
+                        Redux2 todos
                     </Link>
                 </CellGroup.Cell>
             </CellGroup>
