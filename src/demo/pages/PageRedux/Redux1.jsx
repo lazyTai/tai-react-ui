@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import { Button, Layout, HeaderBack, CellBlock, ScrollView } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellBlock, ScrollView } from '../../../components/dingyi.js'
 class PageRedux extends Component {
     constructor() {
         super()
         // this.state = {
         // }
-
         this.add = this.add.bind(this)
         this.down = this.down.bind(this)
     }
