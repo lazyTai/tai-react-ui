@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import './Button.css'
+import '../styles/Button.css'
 import PropTypes from 'prop-types';
 import ButtonGroup from './ButtonGroup'
 
@@ -12,11 +12,12 @@ class Button extends Component {
     state = {
     };
     setStyle() {
-        var { children, type } = this.props;
+        var { children, type, block } = this.props;
         var style = {
             background: '#fff',
             color: '#fff'
         }
+        /* 设置样色 */
         switch (type) {
             case "primary":
                 style.background = "#12c287";
@@ -46,6 +47,10 @@ class Button extends Component {
                 break;
 
         }
+        /* 设置 大小 block */
+        if (block) {
+            style.width = "100%";
+        }
         return style
     }
     render() {
@@ -64,7 +69,8 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    block: PropTypes.bool
 };
 
 Button.ButtonGroup = ButtonGroup;

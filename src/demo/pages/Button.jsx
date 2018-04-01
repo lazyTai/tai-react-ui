@@ -18,11 +18,11 @@ class Button1 extends React.Component {
 
 
                 <CellBlock title="块按钮">
-                    <Button type="primary">primary</Button>
-                    <Button type="danger">danger</Button>
-                    <Button type="infor">infor</Button>
-                    <Button type="disabled">disabled</Button>
-                    <Button type="hollow">hollow</Button>
+                    <Button type="primary" block>primary</Button>
+                    <Button type="danger" block>danger</Button>
+                    <Button type="infor" block>infor</Button>
+                    <Button type="disabled" block>disabled</Button>
+                    <Button type="hollow" block>hollow</Button>
                 </CellBlock>
 
 
