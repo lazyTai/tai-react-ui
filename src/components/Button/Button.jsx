@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 
-import './Button.css'
+import '../styles/Button.css'
 import PropTypes from 'prop-types';
 import ButtonGroup from './ButtonGroup'
-
+import { Icon } from '../Icon/index'
 class Button extends Component {
     static defaultProps = {
         type: 'default',
@@ -12,11 +12,12 @@ class Button extends Component {
     state = {
     };
     setStyle() {
-        var { children, type } = this.props;
+        var { children, type, block } = this.props;
         var style = {
             background: '#fff',
             color: '#fff'
         }
+        /* 设置样色 */
         switch (type) {
             case "primary":
                 style.background = "#12c287";
@@ -46,17 +47,24 @@ class Button extends Component {
                 break;
 
         }
+        /* 设置 大小 block */
+        if (block) {
+            style.width = "100%";
+        }
         return style
     }
     render() {
-        var { children, type, onClick } = this.props;
-        // console.log(type)
+        var { children, type, onClick, icon } = this.props;
+        console.log(icon)
         var style = this.setStyle();
         return (
             <button className="dy-button" style={style}
                 disabled={type == "disabled" ? true : false}
                 onClick={onClick}
             >
+                <span className="_icon">
+                    {icon && <Icon icon={icon} size="15" />}
+                </span >
                 {children}
             </button>
         )
@@ -64,7 +72,9 @@ class Button extends Component {
 }
 
 Button.propTypes = {
-    type: PropTypes.string.isRequired
+    type: PropTypes.string.isRequired,
+    block: PropTypes.bool,
+    icon: PropTypes.string,
 };
 
 Button.ButtonGroup = ButtonGroup;

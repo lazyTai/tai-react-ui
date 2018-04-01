@@ -6,9 +6,6 @@ import Index from './pages/Index'
 import Button from './pages/Button'
 import PageScrollView from './pages/PageScrollView'
 import PageAnimate from './pages/PageAnimate'
-import Redux1 from './pages/PageRedux/Redux1'
-import ReduxIndex from './pages/PageRedux/Index'
-import ReduxRoutes from './routes/ReduxRoutes'
 class Routes extends Component {
     render() {
         const { history, location, match } = this.props;
@@ -20,9 +17,17 @@ class Routes extends Component {
             <Route path="/button" component={Button} />
             <Route path="/PageScrollView" component={PageScrollView} />
             <Route path="/PageAnimate" component={PageAnimate} />
-            <Route path="/PageRedux" component={ReduxRoutes} />
         </Switch>
-    }
+
+        /* <TransitionGroup>
+            <CSSTransition
+                key={currentKey}
+                timeout={100}
+                classNames="pull"
+            > */}
+
+
+    /*  </CSSTransition></TransitionGroup> */
 }
 
 export default withRouter(Routes)
