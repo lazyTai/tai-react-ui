@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import "./buttonGroup.css"
+import "../styles/buttonGroup.css"
 class ButtonGroup extends Component {
     render() {
         return <div className="dy-button-group">
