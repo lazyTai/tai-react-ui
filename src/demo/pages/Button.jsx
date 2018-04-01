@@ -26,6 +26,15 @@ class Button1 extends React.Component {
                 </CellBlock>
 
 
+                <CellBlock title="带上icon">
+                    <Button type="primary" icon="yingxiaoyuan">primary</Button>
+                    <Button type="danger" icon="shangdian">danger</Button>
+                    <Button type="infor" icon="shuzishurukuang">infor</Button>
+                    <Button type="disabled" icon="-joy">disabled</Button>
+                    <Button type="hollow" icon="hulianwang1">hollow</Button>
+                </CellBlock>
+
+
 
             </Layout>
         )

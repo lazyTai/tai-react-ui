@@ -12,6 +12,9 @@
         outline:none;
         opacity: 0.5;
       }
+    ._icon{
+        margin-right:5px; 
+    }
 }
 .dy-button.primary{
     color: #fff;
