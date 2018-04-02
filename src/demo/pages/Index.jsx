@@ -1,17 +1,17 @@
 import React from 'react'
 
-import { Link } from 'react-router-dom'
-import { Button, Layout, Header, CellGroup } from '../../components/dingyi.js'
+import {Link} from 'react-router-dom'
+import {Button, Layout, Header, CellGroup} from '../../components/dingyi.js'
 
 import './css/index.css'
 
 export default class Index extends React.Component {
     render() {
         return <Layout className="index">
-            <Header title="首页" />
-            <CellGroup title="表单组件" >
+            <Header title="首页"/>
+            <CellGroup title="表单组件">
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/button">
                         按钮 Button
@@ -25,49 +25,49 @@ export default class Index extends React.Component {
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/PageFilePicker">
                         文件选择器 PageFilePicker
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
-                    <Link to="/Input">
+                    <Link to="/PageInput">
                         文本框 Input
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Picker_Select">
                         选择器 Picker & Select
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/DatePicker">
                         日期选择器 DatePicker & DateSelect
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Radio">
                         单选框 Radio
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Slider">
                         滑动输入条 Slider
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Switch">
                         开关 Switch
@@ -76,9 +76,9 @@ export default class Index extends React.Component {
             </CellGroup>
 
 
-            <CellGroup title="操作反馈" >
+            <CellGroup title="操作反馈">
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/ActionSheet">
                         动作面板 ActionSheet
@@ -92,21 +92,21 @@ export default class Index extends React.Component {
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Popup">
                         弹出框 Popup
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/Pulllist">
                         上拉加载下拉刷新 Pull
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/PageToast">
                         轻提示 PageToast
@@ -114,14 +114,14 @@ export default class Index extends React.Component {
                 </CellGroup.Cell>
 
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/PageScrollView">
                         动画滚动插件 PageScrollView
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow
-                    leftIcon="camera"
+                                leftIcon="camera"
                 >
                     <Link to="/PageAnimate">
                         动画 PageAnimate

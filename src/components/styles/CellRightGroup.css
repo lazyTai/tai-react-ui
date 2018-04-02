@@ -1,0 +1,21 @@
+.dy-cell-right {
+    line-height: 40px;
+    height: 40px;
+    padding: 0 10px;
+    border-top: 1px solid #ccc;
+
+
+    .title{
+        font-size: 12px;
+        color:#ccc;
+        margin-bottom: 5px;
+    }
+
+    .down  .left{
+        width: 32px;
+        overflow: hidden;
+        font-size: 14px;
+    }
+
+}
+

@@ -1,10 +1,12 @@
-import React, { Component } from 'react'
+import React, {Component} from 'react'
 
 import './cell.css'
-import { Icon } from '../Icon/index'
+import {Icon} from '../Icon/index'
+
 class Cell extends Component {
     render() {
-        var { children,
+        var {
+            children,
             leftIcon,
             arrow
         } = this.props;

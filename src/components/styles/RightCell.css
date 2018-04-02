@@ -1,0 +1,19 @@
+.dy-right-group-item{
+    display: flex;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+    .right {
+        flex: 1;
+        text-indent: 10px;
+    }
+    .left{
+        line-height: 50px;
+    }
+}
+
+.dy-right-group-item:first-child{
+    border-top: 1px solid #ccc;
+}
+.dy-right-group-item:last-child{
+    border-bottom: 1px solid #ccc;
+}
