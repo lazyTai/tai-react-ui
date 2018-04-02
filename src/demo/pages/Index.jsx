@@ -27,8 +27,8 @@ export default class Index extends React.Component {
                 <CellGroup.Cell arrow
                     leftIcon="camera"
                 >
-                    <Link to="/FilePicker">
-                        文件选择器 FilePicker
+                    <Link to="/PageFilePicker">
+                        文件选择器 PageFilePicker
                     </Link>
                 </CellGroup.Cell>
                 <CellGroup.Cell arrow

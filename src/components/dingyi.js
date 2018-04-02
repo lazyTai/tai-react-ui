@@ -8,7 +8,7 @@ import { ScrollView } from './ScrollView/index'
 import { Animate } from './Animate/index'
 import { CheckBox } from './CheckBox/index'
 import { Toast, Loadding } from './Toast/index'
-
+import { FilePicker } from "./FilePiker/index"
 // console.log(ScrollView)
 export {
     Button,
@@ -22,5 +22,6 @@ export {
     Animate,
     CheckBox,
     Toast,
-    Loadding
+    Loadding,
+    FilePicker
 }

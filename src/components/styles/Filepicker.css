@@ -1,0 +1,19 @@
+.dy-file-picker{
+    width: 100%;
+}
+.dy-file-picker .image-show{
+    display: flex;
+    margin-bottom: 10px;
+
+}
+.dy-file-picker .image-show .image{
+    width: 100px;
+    box-sizing: border-box;
+    border: 1px solid #eee;
+    height: 100px;
+    img{
+        width:100%;
+        height:100%;
+    }
+   
+}
