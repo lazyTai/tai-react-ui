@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import '../styles/Filepicker.css'
 import PropTypes from 'prop-types';
+import { IsPicture } from '../utils/util'
 import { Icon } from '../Icon/index'
 import _ from 'lodash'
 class FilePicker extends Component {
@@ -67,9 +68,13 @@ class FilePicker extends Component {
     selectFile(e) {
         var { onSelect } = this.props
         var files = e.target.files
-        onSelect && onSelect.call(this, files)
+        /* 过滤不是图片的 */
+        var image_files = _.filter(files, (item) => {
+            return IsPicture(item.name)
+        })
+        onSelect && onSelect.call(this, image_files)
         this.setState({
-            imageLists: files
+            imageLists: image_files
         })
     }
     componentDidMount() {
