@@ -7,6 +7,7 @@ import Button from './pages/Button'
 import PageScrollView from './pages/PageScrollView'
 import PageAnimate from './pages/PageAnimate'
 import PageCheckout from './pages/PageCheckout'
+import PageToast from './pages/PageToast'
 class Routes extends Component {
     render() {
         const { history, location, match } = this.props;
@@ -19,6 +20,8 @@ class Routes extends Component {
             <Route path="/PageScrollView" component={PageScrollView} />
             <Route path="/PageAnimate" component={PageAnimate} />
             <Route path="/PageCheckout" component={PageCheckout} />
+            <Route path="/PageToast" component={PageToast} />
+            
         </Switch>
 
         /* <TransitionGroup>

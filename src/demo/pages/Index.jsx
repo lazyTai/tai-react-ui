@@ -108,8 +108,8 @@ export default class Index extends React.Component {
                 <CellGroup.Cell arrow
                     leftIcon="camera"
                 >
-                    <Link to="/Toast">
-                        轻提示 Toast
+                    <Link to="/PageToast">
+                        轻提示 PageToast
                     </Link>
                 </CellGroup.Cell>
 

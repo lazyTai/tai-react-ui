@@ -1,0 +1,11 @@
+.dy-toast{
+    position: absolute;
+    z-index: 999;
+    background: #222;
+    color: #fff;
+    top:50%;
+    left:50%;
+
+    .dy-toast-chldren{
+            padding: 10px;}
+}
