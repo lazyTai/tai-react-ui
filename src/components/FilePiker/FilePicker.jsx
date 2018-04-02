@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import '../styles/Filepicker.css'
 import PropTypes from 'prop-types';
 import { Icon } from '../Icon/index'
+import _ from 'lodash'
 class FilePicker extends Component {
     static defaultProps = {
         multiple: false,
@@ -15,16 +16,34 @@ class FilePicker extends Component {
         }
         this.onClick = this.onClick.bind(this)
         this.selectFile = this.selectFile.bind(this)
+        this.deleteImage = this.deleteImage.bind(this)
+    }
+    deleteImage(i) {
+        var _array = this.state.imageLists;
+        var _newarray = [];
+        _.each(_array, (item, index) => {
+            if (index != i) {
+                _newarray.push(item)
+            }
+        })
+        this.setState({
+            imageLists: _newarray
+        })
     }
     renderArray() {
         var _array = [];
         var { imageLists } = this.state
-        for (var i = 0; i < imageLists.length; i++) {
+        for (let i = 0; i < imageLists.length; i++) {
             var imgFile = imageLists[i];
             var src = window.URL.createObjectURL(imgFile)//这里传一个文件对象 例如：file.files[0]
             _array.push(<div className="image" key={Math.random()} >
+                <div
+                    className="cuo"
+                    onClick={() => {
+                        this.deleteImage(i)
+                    }}><Icon icon="cuowu" size={26} /></div>
                 <img src={src} />
-            </div>)
+            </div >)
         }
         return _array
     }
