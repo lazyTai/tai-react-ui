@@ -20,7 +20,7 @@ export default class Index extends React.Component {
                 <CellGroup.Cell
                     leftIcon="camera" arrow
                 >
-                    <Link to="/checkBox">
+                    <Link to="/PageCheckout">
                         复选框 CheckBox
                     </Link>
                 </CellGroup.Cell>

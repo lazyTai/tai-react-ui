@@ -55,7 +55,6 @@ class Button extends Component {
     }
     render() {
         var { children, type, onClick, icon } = this.props;
-        console.log(icon)
         var style = this.setStyle();
         return (
             <button className="dy-button" style={style}

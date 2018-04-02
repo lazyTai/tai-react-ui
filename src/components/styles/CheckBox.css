@@ -1,0 +1,15 @@
+.dy-check-box{
+}
+.dy-check-box .content{
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    color:#333;
+
+    .icon{
+        margin-top:-2px; 
+    }
+    .title{
+        color:#333;
+    }
+}
