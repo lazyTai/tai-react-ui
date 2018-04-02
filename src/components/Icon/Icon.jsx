@@ -3,11 +3,12 @@ import React, { Component } from 'react'
 import './icon.css'
 class Icon extends Component {
     render() {
-        var { icon, size } = this.props;
+        var { icon, size, spin } = this.props;
         var style = {
             fontSize: size + "px"
         }
-        return <svg className="icon" aria-hidden="true"
+        var _className = spin ? "spin" : '';
+        return <svg className={"icon  " + _className} aria-hidden="true"
             style={style}
         >
             <use xlinkHref={'#icon-' + icon}></use>

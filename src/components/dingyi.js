@@ -7,7 +7,7 @@ import { CellGroup, CellBlock } from './Cell/index'
 import { ScrollView } from './ScrollView/index'
 import { Animate } from './Animate/index'
 import { CheckBox } from './CheckBox/index'
-import { Toast } from './Toast/index'
+import { Toast, Loadding } from './Toast/index'
 
 // console.log(ScrollView)
 export {
@@ -21,5 +21,6 @@ export {
     ScrollView,
     Animate,
     CheckBox,
-    Toast
+    Toast,
+    Loadding
 }

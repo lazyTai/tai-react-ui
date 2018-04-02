@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellGroup, Toast, Animate } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellGroup, Toast, Loadding, Animate } from '../../components/dingyi.js'
 
 class PageToast extends Component {
     constructor() {
@@ -17,10 +17,17 @@ class PageToast extends Component {
             <Button.ButtonGroup>
                 <Button onClick={() => {
                     Toast.show(<div>
-                        fuck show
+                        toast show
                 </div>, 1000, (a) => {
                         })
-                }}>toast 1</Button>
+                }}>toast</Button>
+
+                <Button onClick={() => {
+                    Loadding.show(<div>
+                        Loadding show
+                </div>, 1000, (a) => {
+                        })
+                }}>Loadding</Button>
             </Button.ButtonGroup>
         </Layout >
     }

@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 
-import '../styles/Toast.css'
+import '../styles/loadding.css'
 import Mark from './Mark.js'
 import PropTypes from 'prop-types';
-class Toast extends Component {
+import { Icon } from '../Icon/Index'
+class Loadding extends Component {
     static defaultProps = {
         visible: false,
         time: 500,
@@ -13,8 +14,9 @@ class Toast extends Component {
     };
     static show(children, time, close) {
         ReactDOM.render(
-            <Toast visible={true} time={time} close={close}>{children}</Toast>
-            , window.dyToast);
+            <Loadding visible={true} time={time} close={close}>{children}
+            </Loadding>
+            , window.dyLoadding);
     }
     constructor() {
         super();
@@ -23,12 +25,12 @@ class Toast extends Component {
         }
     }
     setPosition() {
-        var dom_dy_toast_chldren = this.refs['dy-toast-chldren']
-        if (dom_dy_toast_chldren) {
-            var _height = dom_dy_toast_chldren.offsetHeight
-            var _width = dom_dy_toast_chldren.offsetWidth
-            window.dyToast.style.marginLeft = -_width / 2
-            window.dyToast.style.marginTop = -_height / 2
+        var dom_content = this.refs['dy-loadding-chldren']
+        if (dom_content) {
+            var _height = dom_content.offsetHeight
+            var _width = dom_content.offsetWidth
+            window.dyLoadding.style.marginLeft = -_width / 2
+            window.dyLoadding.style.marginTop = -_height / 2
         }
 
     }
@@ -38,8 +40,10 @@ class Toast extends Component {
         // console.log(" this.props", this.props)
         if (_visible) {
             Mark.show(0.001, )
-            return <div className="dy-toast-chldren" ref="dy-toast-chldren">
-                {children}
+            return <div className="dy-loadding-chldren" ref="dy-loadding-chldren">
+                <Icon icon="loading" spin={true}
+                    size={22}
+                />  {children}
             </div>
         }
         Mark.close()
@@ -76,16 +80,16 @@ class Toast extends Component {
     }
 }
 
-Toast.propTypes = {
+Loadding.propTypes = {
     visible: PropTypes.bool,
 };
 
-if (!window.dyToast) {
-    window.dyToast = document.createElement('div');
-    window.dyToast.setAttribute('class', "dy-toast")
-    document.body.appendChild(window.dyToast);
+if (!window.dyLoadding) {
+    window.dyLoadding = document.createElement('div');
+    window.dyLoadding.setAttribute('class', "dy-loadding")
+    document.body.appendChild(window.dyLoadding);
 }
 
-ReactDOM.render(<Toast visible={false} />, window.dyToast);
+ReactDOM.render(<Loadding visible={false} />, window.dyLoadding);
 
-export default Toast
+export default Loadding

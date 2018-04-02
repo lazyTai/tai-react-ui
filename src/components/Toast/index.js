@@ -1,3 +1,3 @@
 import Toast from './Toast'
-
-export { Toast }
+import Loadding from './Loadding'
+export { Toast, Loadding }
