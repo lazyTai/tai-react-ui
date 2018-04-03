@@ -1,15 +1,15 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 
 import { Button, Layout, HeaderBack, CellGroup, Toast, Loadding, Animate } from '../../../components/dingyi.js'
 import { fetch_get_good_lists } from '../../actions/action_page_cart'
-class PageCart extends Component {
+class PageCart extends PureComponent {
     constructor() {
         super();
         // this.changeStateUp = this.changeStateUp.bind(this)
     }
     renderGoodArray() {
         var { store, add_to_cart } = this.props;
-        var { good_array } = store.PageCart
+        var good_array = store.PageCart.get('good_array')
         var _array = [];
         good_array.map((item, index) => {
             _array.push(
@@ -24,7 +24,7 @@ class PageCart extends Component {
     }
     renderCartArray() {
         var { store, delete_from_cart } = this.props;
-        var { cart_array } = store.PageCart
+        const cart_array = store.PageCart.get("cart_array")
         var _array = [];
         cart_array.map((item, index) => {
             _array.push(

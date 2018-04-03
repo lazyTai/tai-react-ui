@@ -14,6 +14,7 @@ import PageInput from './pages/components/PageInput'
 import PageRedux1 from './pages/containers/PageRedux1'
 import PageRedux2 from './pages/containers/PageRedux2'
 import PageCart from './pages/containers/PageCart'
+import PageImmutable from './pages/components/PageImmutable'
 
 console.log(PageCart)
 class Routes extends Component {
@@ -34,7 +35,8 @@ class Routes extends Component {
             <Route path="/PageRedux1" component={PageRedux1} />
             <Route path="/PageRedux2" component={PageRedux2} />
             <Route path="/PageCart" component={PageCart} />
-
+            <Route path="/PageImmutable" component={PageImmutable} />
+            
         </Switch>
 
         /* <TransitionGroup>

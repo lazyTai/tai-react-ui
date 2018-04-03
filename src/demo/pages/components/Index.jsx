@@ -35,6 +35,13 @@ export default class Index extends React.Component {
                         PageRedux2
                     </Link>
                 </CellGroup.Cell>
+                <CellGroup.Cell arrow
+                    leftIcon="camera"
+                >
+                    <Link to="/PageImmutable">
+                        PageImmutable
+                    </Link>
+                </CellGroup.Cell>
             </CellGroup>
 
             <CellGroup title="表单组件">
