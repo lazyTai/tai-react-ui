@@ -10,24 +10,6 @@ var config = {
     output: baseConfig.output,
     resolve: baseConfig.resolve,
     module: baseConfig.module,
-    // devServer: {
-    //     contentBase: path.join(__dirname, "dist"),
-    //     publicPath: baseConfig.output.publicPath,
-    //     host: '0.0.0.0',
-    //     port: 3000,
-    //     compress: true,
-    //     noInfo: true,
-    //     inline: true,
-    //     hot: true,
-    //     overlay: true,
-    //     setup: function (app) {
-    //         /* 设置静态目录 */
-    //         // app.use(express.static('dist'));
-    //         app.get('/array', function (req, res) {
-    //             res.json({ a: require('./mock/array') });
-    //         });
-    //     }
-    // },
     plugins: baseConfig.plugins
 };
 

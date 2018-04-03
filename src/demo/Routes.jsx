@@ -13,7 +13,9 @@ import PageInput from './pages/components/PageInput'
 
 import PageRedux1 from './pages/containers/PageRedux1'
 import PageRedux2 from './pages/containers/PageRedux2'
+import PageCart from './pages/containers/PageCart'
 
+console.log(PageCart)
 class Routes extends Component {
     render() {
         const { history, location, match } = this.props;
@@ -31,6 +33,7 @@ class Routes extends Component {
             <Route path="/PageInput" component={PageInput} />
             <Route path="/PageRedux1" component={PageRedux1} />
             <Route path="/PageRedux2" component={PageRedux2} />
+            <Route path="/PageCart" component={PageCart} />
 
         </Switch>
 

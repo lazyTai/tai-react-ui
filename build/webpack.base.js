@@ -5,7 +5,10 @@ module.exports = {
     entry: {
         demo: path.resolve("./src/demo/index.js"),
     },
-    resolve: { alias: {} },
+    resolve: {
+        alias: {
+        }
+    },
     output: {
         path: path.resolve('./dist/'),
         filename: '[name]/[name].js',

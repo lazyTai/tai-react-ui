@@ -10,6 +10,16 @@ export default class Index extends React.Component {
         return <Layout className="index">
             <Header title="首页" />
 
+            <CellGroup title="demo">
+                <CellGroup.Cell arrow
+                    leftIcon="camera"
+                >
+                    <Link to="/PageCart">
+                        cart
+                    </Link>
+                </CellGroup.Cell>
+            </CellGroup>
+
             <CellGroup title="redux">
                 <CellGroup.Cell arrow
                     leftIcon="camera"

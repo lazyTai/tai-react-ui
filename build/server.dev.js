@@ -30,6 +30,10 @@ app.use('/', express.static('./dist/static/'));
 app.get('/array', function (req, res) {
     return res.json(require('./mock/array'))
 });
+app.get('/set_good_lists', function (req, res) {
+    return res.json(require('./mock/set_good_lists'))
+});
+
 
 app.listen(3000, function () {
     console.log("listent to 3000")
