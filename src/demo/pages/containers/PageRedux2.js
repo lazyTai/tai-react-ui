@@ -1,13 +1,14 @@
 import { connect } from 'react-redux'
 import PageRedux2 from '../components/PageRedux2'
-import { add_num, decrease_num } from '../../actions/PageRedux1'
+import { fetch_get_array } from '../../actions/PageRedux2'
 const mapStateToProps = state => {
     return { store: state }
 }
 const mapDispatchToProps = dispatch => {
     return {
-        add: () => { dispatch(add_num) },
-        down: () => { dispatch(decrease_num) }
+        click: () => {
+            dispatch(fetch_get_array())
+        },
     }
 }
 

@@ -18,6 +18,13 @@ export default class Index extends React.Component {
                         PageRedux1
                     </Link>
                 </CellGroup.Cell>
+                <CellGroup.Cell arrow
+                    leftIcon="camera"
+                >
+                    <Link to="/PageRedux2">
+                        PageRedux2
+                    </Link>
+                </CellGroup.Cell>
             </CellGroup>
 
             <CellGroup title="表单组件">

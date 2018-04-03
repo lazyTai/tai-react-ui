@@ -12,6 +12,7 @@ import PageFilePicker from './pages/components/FilePicker'
 import PageInput from './pages/components/PageInput'
 
 import PageRedux1 from './pages/containers/PageRedux1'
+import PageRedux2 from './pages/containers/PageRedux2'
 
 class Routes extends Component {
     render() {
@@ -29,6 +30,7 @@ class Routes extends Component {
             <Route path="/PageFilePicker" component={PageFilePicker} />
             <Route path="/PageInput" component={PageInput} />
             <Route path="/PageRedux1" component={PageRedux1} />
+            <Route path="/PageRedux2" component={PageRedux2} />
 
         </Switch>
 

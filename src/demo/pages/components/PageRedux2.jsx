@@ -9,18 +9,18 @@ class PageRedux2 extends Component {
         }
     }
     render() {
-        var { store, add, down } = this.props
-        var { num } = store.PageRedux2;
+        var { store, click } = this.props
+        var { lists } = store.PageRedux2;
         return <Layout>
             <HeaderBack>PageRedux2 </HeaderBack>
             <CellGroup>
                 <CellGroup.Cell>
-                    num:{num}
+                    {lists}
                 </CellGroup.Cell>
             </CellGroup>
             <CellGroup>
                 <Button.ButtonGroup>
-                    <Button type="danger" onClick={add}>
+                    <Button type="danger" onClick={click}>
                         ajax get 获取数据
                  </Button>
                 </Button.ButtonGroup>

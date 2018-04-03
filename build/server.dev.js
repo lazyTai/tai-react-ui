@@ -7,6 +7,7 @@ var compiler = webpack(webConfig)
 
 var devMiddleware = require('webpack-dev-middleware')(compiler, {
     publicPath: webConfig.output.publicPath,
+    quiet: true
 })
 var hotMiddleware = require('webpack-hot-middleware')(compiler, {
     log: () => { }
@@ -25,7 +26,10 @@ compiler.plugin('compilation', function (compilation) {
 app.use(devMiddleware)
 app.use(hotMiddleware)
 /* 设置静态目录 */
-app.use('/', express.static('./build'));
+app.use('/', express.static('./dist/static/'));
+app.get('/array', function (req, res) {
+    return res.json(require('./mock/array'))
+});
 
 app.listen(3000, function () {
     console.log("listent to 3000")
