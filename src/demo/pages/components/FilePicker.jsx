@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Layout, HeaderBack, CellBlock, FilePicker } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellBlock, FilePicker } from '../../../components/dingyi.js'
 class PageFilePicker extends React.Component {
     render() {
         return (

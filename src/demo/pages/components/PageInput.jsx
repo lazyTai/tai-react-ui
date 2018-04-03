@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellRightGroup, Toast, Loadding, Input } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellRightGroup, Toast, Loadding, Input } from '../../../components/dingyi.js'
 
 class PageInput extends Component {
     constructor() {

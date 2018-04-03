@@ -1,5 +1,0 @@
-components
-下面的文件组件只是负责html的展示
-不需要带入功能
-
-container的组件下面需要带入功能

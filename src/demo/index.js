@@ -1,9 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom';
 import Routes from './Routes.jsx'
-
+import { Provider } from 'react-redux'
 import { HashRouter } from 'react-router-dom';
-
-ReactDOM.render(<HashRouter>
-    <Routes />
-</HashRouter>, document.getElementById('root'))
+import store from './store'
+ReactDOM.render(
+    <Provider store={store}>
+        <HashRouter>
+            <Routes />
+        </HashRouter>
+    </Provider>
+    , document.getElementById('root'))

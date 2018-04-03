@@ -1,5 +1,5 @@
 import React from 'react'
-import { Button, Layout, HeaderBack, CellBlock } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellBlock } from '../../../components/dingyi.js'
 class Button1 extends React.Component {
     render() {
         return (

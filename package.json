@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "description": "\"# tai-react-ui\" \r \"# tai-react-ui\"",
   "main": "index.js",
+  "dev": "webpack-dev-server --config build/webpack.dev.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config build/webpack.dev.js",
+    "dev": "node ./build/server.dev.js",
     "build": "webpack --config build/webpack.build.js"
   },
   "repository": {
@@ -24,7 +25,11 @@
   "dependencies": {
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
-    "react-router-dom": "^4.2.2"
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.2.0"
   },
   "devDependencies": {
     "autoprefixer": "^8.2.0",
@@ -36,6 +41,7 @@
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-0": "^6.24.1",
     "css-loader": "^0.28.11",
+    "express": "^4.16.3",
     "extract-text-webpack-plugin": "^3.0.2",
     "gulp": "^3.9.1",
     "html-webpack-plugin": "^3.1.0",
@@ -48,6 +54,7 @@
     "style-loader": "^0.20.3",
     "vue-template-compiler": "^2.5.16",
     "webpack": "^3.10.0",
-    "webpack-dev-server": "2.7.1"
+    "webpack-dev-middleware": "^2.0.6",
+    "webpack-hot-middleware": "^2.21.2"
   }
 }

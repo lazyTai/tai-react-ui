@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellGroup, CheckBox } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellGroup, CheckBox } from '../../../components/dingyi.js'
 
 class PageCheckout extends Component {
     constructor() {

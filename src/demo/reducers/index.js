@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux'
-import todos from './todo'
+import PageRedux1 from './PageRedux1'
 
 export default combineReducers({
-    todos,
+    PageRedux1,
 })

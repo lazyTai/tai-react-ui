@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellGroup, ScrollView, Animate } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellGroup, ScrollView, Animate } from '../../../components/dingyi.js'
 
 class PageAnimate extends Component {
     constructor() {

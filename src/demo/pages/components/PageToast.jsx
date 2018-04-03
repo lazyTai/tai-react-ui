@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellGroup, Toast, Loadding, Animate } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellGroup, Toast, Loadding, Animate } from '../../../components/dingyi.js'
 
 class PageToast extends Component {
     constructor() {

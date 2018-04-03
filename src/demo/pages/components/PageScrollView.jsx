@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import { Button, Layout, HeaderBack, CellGroup, ScrollView } from '../../components/dingyi.js'
+import { Button, Layout, HeaderBack, CellGroup, ScrollView } from '../../../components/dingyi.js'
 
 console.log(ScrollView)
 class PageScrollView extends Component {
