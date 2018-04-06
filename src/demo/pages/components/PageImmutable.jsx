@@ -31,10 +31,10 @@ import { Map, fromJS, Set, Repeat, Iterable, List } from 'immutable'
 //     debugger
 //     return "update"
 // })
-const a = Repeat("123")
+// const a = Repeat("123")
 // const a = Set([{ a: 1, b: "sad" }, { a: 1, b: "sad" }, { a: 1, b: "sad" }]);
-console.log(a.toString())
-console.log(a.get(10))
+// console.log(a.toString())
+// console.log(a.get(10))
 // console.log(b.toString())
 // console.log(c.toString())
 class PageImmutable extends Component {
